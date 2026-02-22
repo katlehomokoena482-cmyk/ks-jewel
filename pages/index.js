@@ -20,7 +20,15 @@ export default function Home() {
         A Dream Collection for Hello Kitty Lovers 💗
       </p>
 
-      <p style={{ fontSize: "18px", marginTop: "20px", maxWidth: "600px", marginLeft: "auto", marginRight: "auto" }}>
+      <p
+        style={{
+          fontSize: "18px",
+          marginTop: "20px",
+          maxWidth: "600px",
+          marginLeft: "auto",
+          marginRight: "auto",
+        }}
+      >
         Discover our exclusive Hello Kitty inspired jewelry pieces designed for
         true fans who love cute, playful, and timeless accessories. Each piece
         captures soft pink elegance with a bold touch of personality.
@@ -57,8 +65,11 @@ export default function Home() {
 
       <div style={{ marginTop: "70px", fontSize: "14px" }}>
         <p>📍 South Africa</p>
-        <p>Specially Curated for Hello Kitty Enthusiasts • Premium Cute Aesthetic 💕</p>
+        <p>
+          Specially Curated for Hello Kitty Enthusiasts • Premium Cute
+          Aesthetic 💕
+        </p>
       </div>
     </div>
   );
-    }
+}
