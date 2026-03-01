@@ -1,75 +1,119 @@
 export default function Home() {
   const phoneNumber = "27799346533";
   const message = encodeURIComponent(
-    "Hi K's Jewel 💖 I'm interested in your Hello Kitty inspired collection."
+    "Hi K's Jewel 💖 I'm interested in your exclusive Hello Kitty luxury collection."
   );
+
+  const products = [
+    {
+      name: "Hello Kitty Crystal Necklace",
+      price: "R349",
+      image:
+        "https://images.unsplash.com/photo-1617038260897-41a1f14a7c43",
+    },
+    {
+      name: "Hello Kitty Charm Bracelet",
+      price: "R299",
+      image:
+        "https://images.unsplash.com/photo-1588444650733-d3e6b0c7a4c0",
+    },
+    {
+      name: "Hello Kitty Limited Mini Handbag",
+      price: "R799",
+      image:
+        "https://images.unsplash.com/photo-1593032465171-8c3f3f1b3e76",
+    },
+  ];
 
   return (
     <div
       style={{
-        minHeight: "100vh",
-        background: "linear-gradient(to right, #ffb6c1, #ff69b4)",
-        color: "white",
-        textAlign: "center",
-        padding: "60px",
         fontFamily: "Arial, sans-serif",
+        background: "linear-gradient(to bottom, #ffe6f2, #ffffff)",
+        minHeight: "100vh",
+        padding: "40px 20px",
+        textAlign: "center",
       }}
     >
-      <h1 style={{ fontSize: "48px" }}>K's Jewel ✨</h1>
-      <p style={{ fontSize: "22px", marginTop: "20px", fontWeight: "bold" }}>
-        A Dream Collection for Hello Kitty Lovers 💗
-      </p>
+      <h1 style={{ fontSize: "42px", color: "#d63384" }}>
+        K's Jewel 🎀
+      </h1>
 
       <p
         style={{
-          fontSize: "18px",
-          marginTop: "20px",
           maxWidth: "600px",
-          marginLeft: "auto",
-          marginRight: "auto",
+          margin: "20px auto",
+          fontSize: "17px",
+          lineHeight: "1.6",
+          color: "#555",
         }}
       >
-        Discover our exclusive Hello Kitty inspired jewelry pieces designed for
-        true fans who love cute, playful, and timeless accessories. Each piece
-        captures soft pink elegance with a bold touch of personality.
+        K's Jewel is a limited luxury boutique for Hello Kitty lovers.
+        Each piece is carefully sourced internationally and prepared
+        exclusively for you. All orders are pre-order only with a
+        7-day sourcing period. Payment is required to secure your
+        exclusive item.
       </p>
 
-      <div style={{ marginTop: "60px" }}>
-        <h2>💎 Featured Pieces</h2>
-        <p>Hello Kitty Charm Necklace — R169.99</p>
-        <p>Pink Bow Bracelet — R149.99</p>
-        <p>Custom Name Kitty Pendant — R189.99</p>
+      <h2 style={{ marginTop: "40px", color: "#d63384" }}>
+        Limited Collection ✨
+      </h2>
+
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+          gap: "30px",
+          maxWidth: "1000px",
+          margin: "40px auto",
+        }}
+      >
+        {products.map((product, index) => (
+          <div
+            key={index}
+            style={{
+              backgroundColor: "white",
+              borderRadius: "20px",
+              padding: "20px",
+              boxShadow: "0 10px 25px rgba(0,0,0,0.1)",
+            }}
+          >
+            <img
+              src={product.image}
+              alt={product.name}
+              style={{
+                width: "100%",
+                borderRadius: "15px",
+                marginBottom: "15px",
+              }}
+            />
+            <h3>{product.name}</h3>
+            <p style={{ fontWeight: "bold", color: "#d63384" }}>
+              {product.price}
+            </p>
+          </div>
+        ))}
       </div>
 
-      <div style={{ marginTop: "60px" }}>
-        <a
-          href={`https://wa.me/${phoneNumber}?text=${message}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            backgroundColor: "#25D366",
-            color: "white",
-            padding: "15px 35px",
-            borderRadius: "40px",
-            textDecoration: "none",
-            fontSize: "18px",
-            fontWeight: "bold",
-            display: "inline-block",
-            marginTop: "20px",
-            boxShadow: "0 8px 20px rgba(0,0,0,0.2)",
-          }}
-        >
-          Order via WhatsApp 💚
-        </a>
-      </div>
-
-      <div style={{ marginTop: "70px", fontSize: "14px" }}>
-        <p>📍 South Africa</p>
-        <p>
-          Specially Curated for Hello Kitty Enthusiasts • Premium Cute
-          Aesthetic 💕
-        </p>
-      </div>
+      <a
+        href={`https://wa.me/${phoneNumber}?text=${message}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+          backgroundColor: "#25D366",
+          color: "white",
+          padding: "15px 35px",
+          borderRadius: "40px",
+          textDecoration: "none",
+          fontSize: "18px",
+          fontWeight: "bold",
+          display: "inline-block",
+          marginTop: "30px",
+          boxShadow: "0 8px 20px rgba(0,0,0,0.2)",
+        }}
+      >
+        Secure Your Exclusive Order 💚
+      </a>
     </div>
   );
 }
