@@ -8,20 +8,17 @@ export default function Home() {
     {
       name: "Hello Kitty Crystal Necklace",
       price: "R349",
-      image:
-        "https://images.unsplash.com/photo-1617038260897-41a1f14a7c43",
+      image: "https://via.placeholder.com/300x300.png?text=Necklace",
     },
     {
       name: "Hello Kitty Charm Bracelet",
       price: "R299",
-      image:
-        "https://images.unsplash.com/photo-1588444650733-d3e6b0c7a4c0",
+      image: "https://via.placeholder.com/300x300.png?text=Bracelet",
     },
     {
       name: "Hello Kitty Limited Mini Handbag",
       price: "R799",
-      image:
-        "https://images.unsplash.com/photo-1593032465171-8c3f3f1b3e76",
+      image: "https://via.placeholder.com/300x300.png?text=Handbag",
     },
   ];
 
